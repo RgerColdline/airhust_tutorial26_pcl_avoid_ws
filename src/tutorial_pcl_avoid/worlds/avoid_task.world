@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="avoid_task">
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+
+    <gui><camera name="user_camera"><pose>-5 -7 9 0 0.65 0.7</pose></camera></gui>
+
+    <!-- 围墙随随机柱子布局一起生成，侧面只留不可通行的小缝。 -->
+
+    <!-- 起点：白色地面标记，仅显示，不参与碰撞 -->
+    <model name="start_pad">
+      <static>true</static>
+      <link name="body">
+        <pose>0 0 0.001 0 0 0</pose>
+        <visual name="vis"><geometry><plane><normal>0 0 1</normal><size>1.0 1.0</size></plane></geometry>
+          <material><script><name>Gazebo/White</name></script></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- 终点：绿色地面标记，仅显示，不参与碰撞 -->
+    <model name="goal_pad">
+      <static>true</static>
+      <link name="body">
+        <pose>8 0 0.001 0 0 0</pose>
+        <visual name="vis"><geometry><plane><normal>0 0 1</normal><size>1.0 1.0</size></plane></geometry>
+          <material><script><name>Gazebo/Green</name></script></material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

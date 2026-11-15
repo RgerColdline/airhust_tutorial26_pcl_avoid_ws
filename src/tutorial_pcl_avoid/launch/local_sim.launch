@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="world"/>
+    <include file="$(find tutorial_gazebo)/launch/sim-new.launch">
+        <arg name="world" value="$(arg world)"/>
+        <arg name="z" value="0.13"/>
+    </include>
+</launch>

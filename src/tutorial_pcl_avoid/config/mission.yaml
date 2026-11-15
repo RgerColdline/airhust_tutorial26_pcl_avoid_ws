@@ -1,0 +1,8 @@
+# 场景位置使用 MAVROS 本地 ENU 坐标，单位为米。
+takeoff_height: 1.0
+goal_x: 8.0
+goal_y: 0.0
+# 柱子表面之间的通行阈值，包含机体所需余量。
+min_gap: 1.1
+# 位置设定点沿路径移动的速度上限，单位 m/s。
+max_speed: 0.5

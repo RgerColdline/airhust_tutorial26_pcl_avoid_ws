@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="cloud_topic" default="/cloud_registered"/>
+    <arg name="msg_type" default="pointcloud2"/>
+    <arg name="cloud_frame" default="world"/>
+    <rosparam command="load" file="$(find tutorial_pcl_avoid)/config/mission.yaml" ns="mission_node"/>
+    <node pkg="tutorial_pcl_avoid" type="mission_node" name="mission_node" output="screen">
+        <param name="cloud_topic" value="$(arg cloud_topic)"/>
+        <param name="msg_type" value="$(arg msg_type)"/>
+        <param name="cloud_frame" value="$(arg cloud_frame)"/>
+    </node>
+</launch>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>tutorial_pcl_avoid</name>
+  <version>0.1.0</version>
+  <description>阶段四：找出前方的一排柱子，从能过的缝里穿到终点</description>
+
+  <maintainer email="2089378601@qq.com">RgerColdline</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>mavros_msgs</depend>
+  <depend>livox_ros_driver2</depend>
+  <depend>pcl_ros</depend>
+  <depend>pcl_conversions</depend>
+  <depend>eigen</depend>
+
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>tmux</exec_depend>
+  <exec_depend>gazebo_msgs</exec_depend>
+  <depend>std_msgs</depend>
+
+  <export>
+  </export>
+</package>
